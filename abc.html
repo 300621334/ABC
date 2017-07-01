@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 <html>
 <!-- Shafiq-Ur-Rehman #300621334 -->
@@ -6,15 +6,15 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <title>A-B-C</title>
     <style>
-    body {
+        body {
             width: 960px;
             margin: auto;
             border: solid black;
             text-align: center;
         }
-        figure
-        {
-            margin:0;
+        figure {
+            margin: 0;
+            position: relative;
         }
         img
         {
@@ -48,20 +48,33 @@ margin-top:-20px;
         {
             visibility:hidden;
         }
+        canvas#sketchpad
+        {
+            /*width:800px;
+            height:1200px;*/ /*1.5 times 800*/
+            background-color: aliceblue;
+            position:absolute;
+            top:7px;
+            left:100px;
+            opacity: 0.7;
+
+        }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
-<body>
+<body onload="init()">
     <div id="mainDiv">
 
         <article id="slideshow">
 
-            <figure><img id="img" src="1.png" /></figure>
-
+            <figure><img id="img" src="1.png" />
+             <canvas id="sketchpad" width="800" height="1200" ></canvas>
+            </figure>
+           
             <p style="text-align: center">
-                <button id="back">Back</button>
-                <button id="next">Next</button>
+                <button id="back" onclick="clearCanvas(canvas,ctx);">Back</button>
+                <button id="next" onclick="clearCanvas(canvas,ctx);">Next</button>
                 <button id="update">Update</button>
             </p>
 
