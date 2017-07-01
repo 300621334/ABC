@@ -48,7 +48,7 @@ function readTextFile(file) {
             console.log(timeArray);
 
             document.getElementById("slideshow").style.marginTop = (screen.height * 0.15) + "px";
-            document.getElementsByTagName("footer")[0].style.marginTop = ((screen.height) * 0.40) + "px";
+            document.getElementsByTagName("footer")[0].style.marginTop = ((screen.height) * 0.05) + "px";
 
             populate();
         }//outer-if ends
